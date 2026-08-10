@@ -1,0 +1,52 @@
+name: formula
+
+# Keep Formula/krtek.rb on the newest krtek release.
+#
+# The tap pulls rather than krtek pushing, and that is the point: a push from the
+# other repository would need a personal access token kept here as a secret, while
+# this workflow's own GITHUB_TOKEN may already write to the repository it lives in.
+# One less credential to hold, lose, or rotate.
+#
+# krtek's release attaches the formula as krtek.rb - written by its
+# packaging/formula.sh from the checksums the archives were packaged with - so this
+# only has to fetch it. Runs hourly; `gh workflow run formula.yml -R
+# zales/homebrew-krtek` does it at once.
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  formula:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: the newest formula
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p Formula
+          tag=$(gh release view --repo zales/krtek --json tagName -q .tagName)
+          echo "krtek $tag"
+          gh release download "$tag" --repo zales/krtek --pattern krtek.rb --dir Formula --clobber
+          # A formula that does not parse would break `brew update` for everyone
+          # who has this tap, so it is checked before it is committed.
+          ruby -c Formula/krtek.rb
+          grep -q "^  version \"" Formula/krtek.rb
+          echo "tag=$tag" >> "$GITHUB_ENV"
+
+      - name: commit it, if it changed
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add Formula/krtek.rb
+          if git diff --cached --quiet; then
+            echo "already on ${{ env.tag }}"
+          else
+            git commit -m "krtek ${{ env.tag }}"
+            git push
+          fi
