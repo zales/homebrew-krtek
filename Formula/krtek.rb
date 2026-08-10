@@ -1,31 +1,31 @@
-# krtek 0.4.0. Written by packaging/formula.sh - do not edit by hand.
+# krtek 0.4.1. Written by packaging/formula.sh - do not edit by hand.
 class Krtek < Formula
   desc "Database manager for the terminal: SQLite, PostgreSQL, MySQL/MariaDB, Redis"
   homepage "https://github.com/zales/krtek"
-  version "0.4.0"
+  version "0.4.1"
   license "MIT"
 
   # One static binary per platform: nothing is compiled and nothing is depended
   # on, because the client libraries are already inside it.
   on_macos do
     on_arm do
-      url "https://github.com/zales/krtek/releases/download/v0.4.0/krtek-v0.4.0-macos-arm64.tar.gz"
-      sha256 "8ac4c1c4bf34f6b553334f66f859a23b822bcbd00efb6267c3f4c20f03f2f067"
+      url "https://github.com/zales/krtek/releases/download/v0.4.1/krtek-v0.4.1-macos-arm64.tar.gz"
+      sha256 "d76eab906fb08a2baf7e129c6a521e83afc9d07ea2dc7a0a132436c71e12b783"
     end
     on_intel do
-      url "https://github.com/zales/krtek/releases/download/v0.4.0/krtek-v0.4.0-macos-x86_64.tar.gz"
-      sha256 "787795f7ece3a4b457ae116ca6b662b4acc0d5ce0e9caca7c0e92a747537131f"
+      url "https://github.com/zales/krtek/releases/download/v0.4.1/krtek-v0.4.1-macos-x86_64.tar.gz"
+      sha256 "2e6b2afc0508c08be8a6075c96ae4e8bde1ea61523b6b29b2d665f4d1029c079"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/zales/krtek/releases/download/v0.4.0/krtek-v0.4.0-linux-arm64.tar.gz"
-      sha256 "7245d9a05b3153c16c8c5c5a41dd93524fc65d51e5c926a646f7bdf58f7bef65"
+      url "https://github.com/zales/krtek/releases/download/v0.4.1/krtek-v0.4.1-linux-arm64.tar.gz"
+      sha256 "9ffc82fdc06dbae7e7a6dd4cb88e650d3b3cf72c09bce4b91ce87a6fccd6bd5b"
     end
     on_intel do
-      url "https://github.com/zales/krtek/releases/download/v0.4.0/krtek-v0.4.0-linux-x86_64.tar.gz"
-      sha256 "569082760b8821149b4911b3e62aeada4d092bbad22d1d28feceda60eed621ca"
+      url "https://github.com/zales/krtek/releases/download/v0.4.1/krtek-v0.4.1-linux-x86_64.tar.gz"
+      sha256 "020711495954b98eda1d784790de99a05e637b08f2d92ce498b08169166e92ce"
     end
   end
 
