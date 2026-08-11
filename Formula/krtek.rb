@@ -1,6 +1,6 @@
 # krtek 0.5.0. Written by packaging/formula.sh - do not edit by hand.
 class Krtek < Formula
-  desc "Terminal database manager for SQLite, PostgreSQL, MySQL, Redis and Kafka"
+  desc "Database manager for the terminal: SQLite, PostgreSQL, MySQL/MariaDB, Redis"
   homepage "https://github.com/zales/krtek"
   version "0.5.0"
   license "MIT"
