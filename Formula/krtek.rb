@@ -1,31 +1,31 @@
-# krtek 0.4.1. Written by packaging/formula.sh - do not edit by hand.
+# krtek 0.5.0. Written by packaging/formula.sh - do not edit by hand.
 class Krtek < Formula
   desc "Database manager for the terminal: SQLite, PostgreSQL, MySQL/MariaDB, Redis"
   homepage "https://github.com/zales/krtek"
-  version "0.4.1"
+  version "0.5.0"
   license "MIT"
 
   # One static binary per platform: nothing is compiled and nothing is depended
   # on, because the client libraries are already inside it.
   on_macos do
     on_arm do
-      url "https://github.com/zales/krtek/releases/download/v0.4.1/krtek-v0.4.1-macos-arm64.tar.gz"
-      sha256 "d76eab906fb08a2baf7e129c6a521e83afc9d07ea2dc7a0a132436c71e12b783"
+      url "https://github.com/zales/krtek/releases/download/v0.5.0/krtek-v0.5.0-macos-arm64.tar.gz"
+      sha256 "1a369e423933d5f2d29537548bdc9b520b81d3f5b87b91783d09676a51d82a25"
     end
     on_intel do
-      url "https://github.com/zales/krtek/releases/download/v0.4.1/krtek-v0.4.1-macos-x86_64.tar.gz"
-      sha256 "2e6b2afc0508c08be8a6075c96ae4e8bde1ea61523b6b29b2d665f4d1029c079"
+      url "https://github.com/zales/krtek/releases/download/v0.5.0/krtek-v0.5.0-macos-x86_64.tar.gz"
+      sha256 "611308ea30c65bfd6cbe6c18167f47e262bf5bc0a2a5530bc25323bf7d0d601c"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/zales/krtek/releases/download/v0.4.1/krtek-v0.4.1-linux-arm64.tar.gz"
-      sha256 "9ffc82fdc06dbae7e7a6dd4cb88e650d3b3cf72c09bce4b91ce87a6fccd6bd5b"
+      url "https://github.com/zales/krtek/releases/download/v0.5.0/krtek-v0.5.0-linux-arm64.tar.gz"
+      sha256 "3171f3f962bc970923d146f2f4f404df25b4a0c7b7b7e90b2d3db3d8cb3f1bfa"
     end
     on_intel do
-      url "https://github.com/zales/krtek/releases/download/v0.4.1/krtek-v0.4.1-linux-x86_64.tar.gz"
-      sha256 "020711495954b98eda1d784790de99a05e637b08f2d92ce498b08169166e92ce"
+      url "https://github.com/zales/krtek/releases/download/v0.5.0/krtek-v0.5.0-linux-x86_64.tar.gz"
+      sha256 "41337d7cdcda6714d1e9770006e9b648860e85ecf87e4b3cbcbcc1469f587ccb"
     end
   end
 
