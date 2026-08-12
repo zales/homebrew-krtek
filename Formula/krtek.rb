@@ -1,31 +1,31 @@
-# krtek 0.5.0. Written by packaging/formula.sh - do not edit by hand.
+# krtek 0.6.0. Written by packaging/formula.sh - do not edit by hand.
 class Krtek < Formula
-  desc "Database manager for the terminal: SQLite, PostgreSQL, MySQL/MariaDB, Redis"
+  desc "Terminal database manager for SQLite, PostgreSQL, MySQL, Redis, Kafka, S3 and RabbitMQ"
   homepage "https://github.com/zales/krtek"
-  version "0.5.0"
+  version "0.6.0"
   license "MIT"
 
   # One static binary per platform: nothing is compiled and nothing is depended
   # on, because the client libraries are already inside it.
   on_macos do
     on_arm do
-      url "https://github.com/zales/krtek/releases/download/v0.5.0/krtek-v0.5.0-macos-arm64.tar.gz"
-      sha256 "1a369e423933d5f2d29537548bdc9b520b81d3f5b87b91783d09676a51d82a25"
+      url "https://github.com/zales/krtek/releases/download/v0.6.0/krtek-v0.6.0-macos-arm64.tar.gz"
+      sha256 "29899196ad0d11b918ba22a6bf6d8916ccf2f44952d2e74cdd051b4cf1493272"
     end
     on_intel do
-      url "https://github.com/zales/krtek/releases/download/v0.5.0/krtek-v0.5.0-macos-x86_64.tar.gz"
-      sha256 "611308ea30c65bfd6cbe6c18167f47e262bf5bc0a2a5530bc25323bf7d0d601c"
+      url "https://github.com/zales/krtek/releases/download/v0.6.0/krtek-v0.6.0-macos-x86_64.tar.gz"
+      sha256 "e0bfc0f575acdb0d9de3870f870f23b4be89a67ff2492e9894167cd336bb7c4a"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/zales/krtek/releases/download/v0.5.0/krtek-v0.5.0-linux-arm64.tar.gz"
-      sha256 "3171f3f962bc970923d146f2f4f404df25b4a0c7b7b7e90b2d3db3d8cb3f1bfa"
+      url "https://github.com/zales/krtek/releases/download/v0.6.0/krtek-v0.6.0-linux-arm64.tar.gz"
+      sha256 "f732038b44475b48b34eb69eea6fe14046ee0416431dc791c53d19a0cedc7f49"
     end
     on_intel do
-      url "https://github.com/zales/krtek/releases/download/v0.5.0/krtek-v0.5.0-linux-x86_64.tar.gz"
-      sha256 "41337d7cdcda6714d1e9770006e9b648860e85ecf87e4b3cbcbcc1469f587ccb"
+      url "https://github.com/zales/krtek/releases/download/v0.6.0/krtek-v0.6.0-linux-x86_64.tar.gz"
+      sha256 "d8c0dbc1aebbeba5ff39a810e06ba017dd257d709ec0c64a44942893e72f98e5"
     end
   end
 
