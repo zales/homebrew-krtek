@@ -1,31 +1,31 @@
-# krtek 0.7.2. Written by packaging/formula.sh - do not edit by hand.
+# krtek 0.8.0. Written by packaging/formula.sh - do not edit by hand.
 class Krtek < Formula
   desc "Terminal database manager for SQLite, PostgreSQL, MySQL, Redis, Kafka, S3, Azure Blob, RabbitMQ and SFTP"
   homepage "https://github.com/zales/krtek"
-  version "0.7.2"
+  version "0.8.0"
   license "MIT"
 
   # One static binary per platform: nothing is compiled and nothing is depended
   # on, because the client libraries are already inside it.
   on_macos do
     on_arm do
-      url "https://github.com/zales/krtek/releases/download/v0.7.2/krtek-v0.7.2-macos-arm64.tar.gz"
-      sha256 "fd2de3d18b0efa9b075ccdc0ffea6aac1243952a26969c2c3c4e7ddeb5307e47"
+      url "https://github.com/zales/krtek/releases/download/v0.8.0/krtek-v0.8.0-macos-arm64.tar.gz"
+      sha256 "62bbfbee79405ee755ebd32de2ff232caf12d08ef0478317a03a30f17a707f42"
     end
     on_intel do
-      url "https://github.com/zales/krtek/releases/download/v0.7.2/krtek-v0.7.2-macos-x86_64.tar.gz"
-      sha256 "dc72d7c3df0b5ffb88ac63cb2f545530fd3e27de8a95f59cf75a2e735426cd08"
+      url "https://github.com/zales/krtek/releases/download/v0.8.0/krtek-v0.8.0-macos-x86_64.tar.gz"
+      sha256 "da36c705c75551a76102a590a240963c134d5ed07120cecc0dc41d240ec58905"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/zales/krtek/releases/download/v0.7.2/krtek-v0.7.2-linux-arm64.tar.gz"
-      sha256 "7f23cbf340b63d3653ac73bfa89fe60759a778b5502f249da84374a85a8dbdb4"
+      url "https://github.com/zales/krtek/releases/download/v0.8.0/krtek-v0.8.0-linux-arm64.tar.gz"
+      sha256 "4e6257dfb53c534d154110a9772b6cbe9f649a0c113bc09d85079e51db29d3af"
     end
     on_intel do
-      url "https://github.com/zales/krtek/releases/download/v0.7.2/krtek-v0.7.2-linux-x86_64.tar.gz"
-      sha256 "816a8b829f232a3a7dbdb00b580fb94b344e12289d5d0bf3f936f3f99f1d6e29"
+      url "https://github.com/zales/krtek/releases/download/v0.8.0/krtek-v0.8.0-linux-x86_64.tar.gz"
+      sha256 "d0ba3afb8366862b976615db8bff49f452586498928634ffea691fb6371a4abc"
     end
   end
 
