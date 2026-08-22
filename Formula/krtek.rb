@@ -1,31 +1,38 @@
 # krtek 0.9.0. Written by packaging/formula.sh - do not edit by hand.
 class Krtek < Formula
-  desc "Terminal database manager for SQLite, PostgreSQL, MySQL, Redis, Kafka, S3, Azure Blob, RabbitMQ and SFTP"
+  desc "Terminal database manager for SQLite, PostgreSQL, MySQL, Redis, Kafka, S3, Azure Blob, RabbitMQ, SFTP and Kubernetes"
   homepage "https://github.com/zales/krtek"
   version "0.9.0"
   license "MIT"
 
+  # Poured rather than "built", which is what stops Homebrew asking a
+  # machine that compiles nothing whether its Xcode is new enough.
+  bottle do
+    root_url "https://github.com/zales/krtek/releases/download/v0.9.0"
+    sha256 cellar: "/opt/homebrew/Cellar", arm64_sequoia: "d968a25a1df03c1b050d685b90866a0445ca8e9b41be4f89702b6fbf9acc9246"
+    sha256 cellar: :any, sequoia: "1ba8fcdc8049733b8504861ebdfc36f243b2a1c49243ddb86e0233abae9146e3"
+  end
   # One static binary per platform: nothing is compiled and nothing is depended
   # on, because the client libraries are already inside it.
   on_macos do
     on_arm do
       url "https://github.com/zales/krtek/releases/download/v0.9.0/krtek-v0.9.0-macos-arm64.tar.gz"
-      sha256 "3aed60eea79bb095bb351cbd9489107c615d8f19b91daac6c795551c79bf4e2e"
+      sha256 "9256b6a516f5e9f07f6a81322e116e2031bfbb8e38bda21ec7721d9f7be9420b"
     end
     on_intel do
       url "https://github.com/zales/krtek/releases/download/v0.9.0/krtek-v0.9.0-macos-x86_64.tar.gz"
-      sha256 "e39d53413a7866667a50be8d87275e2b943cfebe966de6735a1d8b9fe490c253"
+      sha256 "a54dd1f970618c3101f1f563aea4d9f43395a214d52310d1ccf6316e6bdd36c7"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/zales/krtek/releases/download/v0.9.0/krtek-v0.9.0-linux-arm64.tar.gz"
-      sha256 "75928997ad20b05d553b1ec9748ffbc5704b08991f77dbf2e95b8ca30a149087"
+      sha256 "9a6ba2dd71b212c079c27dcccee4e3d9e74df2bea746800fbe0a434bd802efbd"
     end
     on_intel do
       url "https://github.com/zales/krtek/releases/download/v0.9.0/krtek-v0.9.0-linux-x86_64.tar.gz"
-      sha256 "33cedef49b69b19990dedb93426c3ca6a6d86594cc7102dcfc01ebeab04f81ed"
+      sha256 "22b2c75621eee59eb3733ac3b3ed0840d023aedb7fc3d1539ec88ae44f789ee1"
     end
   end
 
