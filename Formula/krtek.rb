@@ -9,30 +9,30 @@ class Krtek < Formula
   # machine that compiles nothing whether its Xcode is new enough.
   bottle do
     root_url "https://github.com/zales/krtek/releases/download/v0.9.0"
-    sha256 cellar: "/opt/homebrew/Cellar", arm64_sequoia: "d968a25a1df03c1b050d685b90866a0445ca8e9b41be4f89702b6fbf9acc9246"
-    sha256 cellar: :any, sequoia: "1ba8fcdc8049733b8504861ebdfc36f243b2a1c49243ddb86e0233abae9146e3"
+    sha256 cellar: "/opt/homebrew/Cellar", arm64_sequoia: "4078c6ca7c97aba7abbf494e8643c4ac9ebade9f53c90ba67cfea545de6c0ccc"
+    sha256 cellar: :any, sequoia: "2e7632b9e733d976328dffcfddf4d4a1956cc4b0554abe1ff22acdb5266c1103"
   end
   # One static binary per platform: nothing is compiled and nothing is depended
   # on, because the client libraries are already inside it.
   on_macos do
     on_arm do
       url "https://github.com/zales/krtek/releases/download/v0.9.0/krtek-v0.9.0-macos-arm64.tar.gz"
-      sha256 "9256b6a516f5e9f07f6a81322e116e2031bfbb8e38bda21ec7721d9f7be9420b"
+      sha256 "3ae87a87299168f04ee88631e1df31264577d5549cc08df8ce6c378f3855c7ff"
     end
     on_intel do
       url "https://github.com/zales/krtek/releases/download/v0.9.0/krtek-v0.9.0-macos-x86_64.tar.gz"
-      sha256 "a54dd1f970618c3101f1f563aea4d9f43395a214d52310d1ccf6316e6bdd36c7"
+      sha256 "a450ab8400acc6338ce49f250859a6a523746ea03a8a6733506113a6ea0fd272"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/zales/krtek/releases/download/v0.9.0/krtek-v0.9.0-linux-arm64.tar.gz"
-      sha256 "9a6ba2dd71b212c079c27dcccee4e3d9e74df2bea746800fbe0a434bd802efbd"
+      sha256 "e502ab953f04e792bd67305c08c806a4a16f342d5f77a1dd5b59cb56d6db2d38"
     end
     on_intel do
       url "https://github.com/zales/krtek/releases/download/v0.9.0/krtek-v0.9.0-linux-x86_64.tar.gz"
-      sha256 "22b2c75621eee59eb3733ac3b3ed0840d023aedb7fc3d1539ec88ae44f789ee1"
+      sha256 "03fa569629315b9477ee32626162538e60ba6481eca3ad6065530ead059cf9df"
     end
   end
 
