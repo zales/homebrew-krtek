@@ -1,38 +1,38 @@
-# krtek 0.17.0. Written by packaging/formula.sh - do not edit by hand.
+# krtek 0.18.0. Written by packaging/formula.sh - do not edit by hand.
 class Krtek < Formula
   desc "Terminal database manager for SQLite, PostgreSQL, MySQL, Redis, Kafka, S3, Azure Blob, RabbitMQ, MQTT, SFTP and Kubernetes"
   homepage "https://github.com/zales/krtek"
-  version "0.17.0"
+  version "0.18.0"
   license "MIT"
 
   # Poured rather than "built", which is what stops Homebrew asking a
   # machine that compiles nothing whether its Xcode is new enough.
   bottle do
-    root_url "https://github.com/zales/krtek/releases/download/v0.17.0"
-    sha256 cellar: "/opt/homebrew/Cellar", arm64_sequoia: "01955416728fe402e40911b3504414d82a7af91e3769ead1ff2360ac54a8e41e"
-    sha256 cellar: :any, sequoia: "9b846df7a10c1776b7ba9b501d8c009bb5b44f417cebc8f14bde10506a7fd5d4"
+    root_url "https://github.com/zales/krtek/releases/download/v0.18.0"
+    sha256 cellar: "/opt/homebrew/Cellar", arm64_sequoia: "bc383af2f641707921bbd2d44354c8c7a79ad70e85fde41c2f1b773239aad612"
+    sha256 cellar: :any, sequoia: "006e9ff5e8f27adec3640775a978853584de9c7787513961ee70ab66a25cc88a"
   end
   # One static binary per platform: nothing is compiled and nothing is depended
   # on, because the client libraries are already inside it.
   on_macos do
     on_arm do
-      url "https://github.com/zales/krtek/releases/download/v0.17.0/krtek-v0.17.0-macos-arm64.tar.gz"
-      sha256 "f815464f3f826b1cb8838c72d992989f593ad4338cc16920fef4490d631f46c6"
+      url "https://github.com/zales/krtek/releases/download/v0.18.0/krtek-v0.18.0-macos-arm64.tar.gz"
+      sha256 "c2464dd3b7ec99c3002ae657f6609422d5f6b6954190fdf347c55a89a4e9632e"
     end
     on_intel do
-      url "https://github.com/zales/krtek/releases/download/v0.17.0/krtek-v0.17.0-macos-x86_64.tar.gz"
-      sha256 "9cfc444f47f81830d17a661c3130ac6186ab6223171c06258d78fe5a10a8259f"
+      url "https://github.com/zales/krtek/releases/download/v0.18.0/krtek-v0.18.0-macos-x86_64.tar.gz"
+      sha256 "099de1e7d25be1e00ea21c96ec59251b17941cc2d0823a5d7e3cfd16767198d6"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/zales/krtek/releases/download/v0.17.0/krtek-v0.17.0-linux-arm64.tar.gz"
-      sha256 "43b456490bbdf500ba22280a8f6993287f8cf826224dcde0c628908a681af5c9"
+      url "https://github.com/zales/krtek/releases/download/v0.18.0/krtek-v0.18.0-linux-arm64.tar.gz"
+      sha256 "9a0ddfe1825662a58efb294417da05098f2a052a370033b27536809d4ec8cc72"
     end
     on_intel do
-      url "https://github.com/zales/krtek/releases/download/v0.17.0/krtek-v0.17.0-linux-x86_64.tar.gz"
-      sha256 "222b5384954cbce1811a6f2f943007bbe2ba856ffbe234609f79c26db5aa6f36"
+      url "https://github.com/zales/krtek/releases/download/v0.18.0/krtek-v0.18.0-linux-x86_64.tar.gz"
+      sha256 "4e7e7d29ec57f7ab3ed77fedc5ae1093e7b73ccfab2de6b92567d415e5bbcb20"
     end
   end
 
